@@ -4,7 +4,7 @@ require "gitinit/version"
 
 Gem::Specification.new do |s|
   s.name        = "gitinit"
-  s.version     = Gitinit::VERSION
+  s.version     = GitInit::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Mike Bethany"]
   s.email       = ["mikbe.tk@gmail.com"]
@@ -14,8 +14,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency("commandable")
 
-  s.add_development_dependency("rspec")
-  s.add_development_dependency("steak")
+  s.add_development_dependency("rspec", "~>2.5")
+  s.add_development_dependency("cucumber", "~>0.10")
+  s.add_development_dependency("aruba", "~>0.3")
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {spec}/*`.split("\n")
